@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+
+        class Animal{
+            constructor(cor,tamanho,peso){
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+            dormir(){
+                console.log('Dormir')
+            }
+        }
+        
+
+        class Passaro extends Animal{
+            constructor(bico, cor, tamanho, peso){
+                super(cor, tamanho, peso)
+                //this.cor = 'Branco e marrom'
+                //this.tamanho = 10
+                this.bico = bico
+            }
+            voar(){
+                console.log('Voar')
+            }
+            /*dormir(){
+                console.log('Dormir')
+            }*/
+        }
+
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso){
+                super('Médio', cor, tamanho, peso)
+                this.sabeFalar = sabeFalar
+            }
+            falar(){
+                console.log('Fala')
+            }
+        }
+
+        class Papagaio2 extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso){
+                super('Médio', cor, tamanho, peso)
+                this.sabeFalar = sabeFalar
+            }
+            falar(){
+                console.log('Fala')
+            }
+        }
+
+        let papagaio = new Papagaio(true, 'Verde', 5, 320)
+        console.log(papagaio)
+
+        let papagaio2 = new Papagaio2(false, 'Azul', 15, 1320)
+        console.log(papagaio2)
+
+
+        document.write("Hello world")
+    </script>
+
+    <title>ES6</title>
+</head>
+<body>
+    
+</body>
+</html>
