@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+
+        class Animal{
+            constructor(bico,cor,tamanho, peso){
+                this.cor = cor
+                this.tamanho = tamanho
+            }
+            dormir(){
+                console.log('Dormir')
+            }
+        }
+        
+
+        class Passaro extends Animal{
+            constructor(bico, cor, tamanho, peso){
+                super()
+                //this.cor = 'Branco e marrom'
+                //this.tamanho = 10
+                this.bico = bico
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+            /*dormir(){
+                console.log('Dormir')
+            }*/
+            voar(){
+                console.log('Voar')
+            }
+        }
+
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso){
+                super()
+                this.sabeFalar = sabeFalar
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+            falar(){
+                console.log('Fala')
+            }
+        }
+
+        class Avestruz extends Passaro{
+            constructor(){
+                super('Grande', 'Branco', 250, 120)
+            }
+            enterrarCabeca(){
+                console.log('Enterra a cabeça')
+            }
+
+            voar(){
+                console.log('Não sabe voar')
+            }
+            
+        }
+
+        let papagaio = new Papagaio(false,'branco', 270, 15000)
+        console.log(papagaio)
+
+        papagaio.voar()
+
+        let passaro = new Passaro()
+        console.log(passaro)
+
+        let avestruz = new Avestruz()
+        console.log(avestruz)
+        avestruz.enterrarCabeca()
+        avestruz.voar()
+
+        
+    </script>
+
+    <title>ES6</title>
+</head>
+<body>
+    
+</body>
+</html>
